@@ -32,7 +32,7 @@ jobs:
     - name: Acquire Audits
       uses: actions/checkout@v2
       with: 
-        repository: pipeline-v2-eligibility/audits
+        repository: pipeline-v2-eligibility/audits-2025
         path: audits
 
     - name: Install Dependencies
@@ -53,7 +53,7 @@ jobs:
       with:
         track: 'backend'
         server: https://api.sheetson.com/v2/sheets
-        sheetid: 1TpZp5pXOGDNhODDvbbjEffXopljG0MPdLxl0RVFY3yo
-        token: HXlur8K20ZpoB-6FNsnSUtj2kGoDqCDHDl8vZBdLtQCv9UFOVhMsM2IBwD8
-        properties: ${{ github.workspace }}/properties.json
+        sheetid: 1UYfLJulnT9rhSRFCN4whoUAU6QS-AYfFlg9da8-cyqo
+        token: 18imZ0WvJj66KEtLNbBHq5jBa9U666hdUP7PdFathYLkobDXGhMzS0XndY4
+        properties: ${{ github.workspace }}/about.json
         
