@@ -4,6 +4,8 @@
 
 This document describes the Tracey Logging API, designed for capturing and retrieving log entries. This API serves as a challenge for mid-level developers looking to enhance their skills in building robust backend services.
 
+<img src="./tracey-logger.jpg" alt="Tracey Logging API" width="500"/>
+
 ## Getting Started
 
 To begin this challenge, please go to the following GitHub repository: [https://github.com/pipeline-v2-eligibility/backend-starter-2025](https://github.com/pipeline-v2-eligibility/backend-starter-2025). **Instead of cloning or forking, use the green **Use this template** button** to create your own repository. This is super importan. It will provide you with a necessary starting point for your solution to be evaluated.
@@ -116,7 +118,7 @@ This endpoint allows for retrieving log entries with various filtering and sorti
 
 ## How to Submit
 
-Your submission will be evaluated based on the code in your main branch or any pull requests raised against it.
+Your submission will be evaluated each time you push code to your main branch or raise a pull requests raised against it. You are free to push and PR as many times as you want.
 
 * **Complete `about.json`**: You **are REQUIRED** to fill in your personal details in the `about.json` file located in the root of your repository. This file is crucial for identifying your submission.
 
