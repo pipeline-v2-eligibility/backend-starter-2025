@@ -12,25 +12,25 @@ on:
 
 jobs:    
   autograde:
-    name: Test & Auto-grade Code Challenge
+    name: ⏳ Score Code Challenge
     if: ${{ !github.event.repository.is_template }}
     runs-on: ubuntu-latest
     
     strategy:
       matrix:
-        node-version: [16.x]
+        node-version: [20.x]
 
     steps:
     - name: Checkout Your Code
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
 
     - name: Prepare Environment
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
     
     - name: Acquire Audits
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with: 
         repository: pipeline-v2-eligibility/audits-2025
         path: audits
@@ -38,6 +38,7 @@ jobs:
     - name: Install Dependencies
       run: |
         npm install --location=global yarn
+        yarn install
         cd audits
         git pull --no-rebase
         yarn install
@@ -49,11 +50,11 @@ jobs:
 
     - name: Report Audits
       if: always()
-      uses: pipeline-v2-eligibility/jest-to-sheets@v1
+      uses: pipeline-v2-eligibility/tests-to-sheets@v1
       with:
         track: 'backend'
         server: https://api.sheetson.com/v2/sheets
         sheetid: 1UYfLJulnT9rhSRFCN4whoUAU6QS-AYfFlg9da8-cyqo
         token: 18imZ0WvJj66KEtLNbBHq5jBa9U666hdUP7PdFathYLkobDXGhMzS0XndY4
-        properties: ${{ github.workspace }}/about.json
+        about: ${{ github.workspace }}/about.json
         
